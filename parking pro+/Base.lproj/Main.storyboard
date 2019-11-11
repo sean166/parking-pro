@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="3je-EZ-tYD">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="parking_pro_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="oa3-SM-F1F">
+                                <rect key="frame" x="0.0" y="60" width="414" height="782"/>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3L-G4-DQM">
+                                <rect key="frame" x="20" y="862" width="374" height="30"/>
+                                <state key="normal" title="Search Nearby Parking Lot"/>
+                                <connections>
+                                    <action selector="doNearbyRestaurantsClick" destination="BYZ-38-t0r" eventType="touchUpInside" id="9BC-kY-23n"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" barStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="4uj-cm-0Ai">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="Parking Pro+" id="b4v-TD-JV4"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="oa3-SM-F1F" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="1Il-om-tci"/>
+                            <constraint firstItem="v3L-G4-DQM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="FP0-KD-qT7"/>
+                            <constraint firstItem="oa3-SM-F1F" firstAttribute="top" secondItem="4uj-cm-0Ai" secondAttribute="bottom" constant="-28" id="FkG-Fj-uF0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v3L-G4-DQM" secondAttribute="trailing" constant="20" id="LZy-7Q-rGs"/>
+                            <constraint firstAttribute="trailing" secondItem="4uj-cm-0Ai" secondAttribute="trailing" id="U6a-a1-kic"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="oa3-SM-F1F" secondAttribute="bottom" constant="20" id="YSL-jv-l63"/>
+                            <constraint firstItem="oa3-SM-F1F" firstAttribute="centerX" secondItem="4uj-cm-0Ai" secondAttribute="centerX" id="bST-kF-t3c"/>
+                            <constraint firstItem="4uj-cm-0Ai" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="44" id="lKL-Rh-uQd"/>
+                            <constraint firstItem="v3L-G4-DQM" firstAttribute="top" secondItem="oa3-SM-F1F" secondAttribute="bottom" constant="20" id="rcS-AF-jjL"/>
+                            <constraint firstItem="4uj-cm-0Ai" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wok-IP-sbP"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="oa3-SM-F1F" secondAttribute="trailing" id="xez-OI-igu"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XYz-Km-ZT6"/>
+                    <connections>
+                        <outlet property="myMap" destination="oa3-SM-F1F" id="DI9-5A-XnD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="137.94642857142856"/>
+        </scene>
+        <!--SupportVC-->
+        <scene sceneID="4nK-fi-akU">
+            <objects>
+                <viewController storyboardIdentifier="SupportScene" id="H68-Oz-WiF" customClass="SupportVC" customModule="parking_pro_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LBV-TM-jPb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oY8-6H-n7P">
+                                <rect key="frame" x="121" y="296" width="157" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
+                                <state key="normal" title="905-617-6809"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="If You Need Help Call This Number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0YG-18-NEd">
+                                <rect key="frame" x="75" y="141" width="264" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="psF-NA-uGc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cl-pg-Sx4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="129"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LuI-e3-JYb">
+            <objects>
+                <navigationController id="3je-EZ-tYD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Hkn-3c-C6h">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Dqg-6x-xBJ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q5h-sL-S4y" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-801" y="129"/>
+        </scene>
+    </scenes>
+</document>
